@@ -8,11 +8,11 @@ class db_connection:
         return conn
 
 
-val = db_connection.conn(self=db_connection, host='localhost', user='root', password='1234', db='eie')
+val = db_connection.conn(self=db_connection, host='localhost', user='root', password='given password', db='given_db')
 
 
 display_before_insert = 'select * from students'
-query_insert = "insert into students values('8','achinthiya','ganesh','nci','22','da')"
+query_insert = "insert into students values('*','*','*','*','*','*')" #enter values equal to column numbers
 dispaly_after_insert = 'select * from students'
 
 
@@ -23,7 +23,6 @@ for row in check:
 
 val.execute(query_insert)
 val.execute(dispaly_after_insert)
-print('##############################################################################')
 check_1 = val.fetchall()
 for rows in check_1:
     print(rows)
