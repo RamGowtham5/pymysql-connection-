@@ -4,11 +4,11 @@ class db_connection:
     import pymysql
 
     def conn(self, host, user, password, db):
-        conn = self.pymysql.connect(host, user, password, db).cursor()
+        conn = self.pymysql.connect(host, user, password, db)
         return conn
 
 
-val = db_connection.conn(self=db_connection, host='localhost', user='root', password='given password', db='given_db')
+val = db_connection.conn(self=db_connection, host='localhost', user='root', password='given password', db='given_db').cursor()
 
 
 display_before_insert = 'select * from students'
